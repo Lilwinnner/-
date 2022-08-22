@@ -104,7 +104,7 @@ h1,h2,h3,h4,h5,h6{
 	flex-direction:column;
 	width: 50px;
 	height:auto;
-	color:white;
+	color:gray;
 	cursor:pointer;
 	margin-right:40px;
 	justify-content:center;
@@ -367,19 +367,22 @@ h1,h2,h3,h4,h5,h6{
 		font-size:15px;
 }
 
-/*скидка фото баннер*/
-.skidka{
-	margin-top:-60px;
-}
-	
-
-.banner{
-	width:100%;
+/*Контакты*/
+#contacts{
+	margin-top:-140px;
 }
 
-.banner-img{
+
+
+/*map*/
+.maps{
 	width:100%;
+	height:450px;
+	position:absolute;
 }
+
+
+
 
 /* Media */
 @media screen and (max-width: 950px){
@@ -389,7 +392,10 @@ h1,h2,h3,h4,h5,h6{
 }
 
 @media screen and (max-width: 900px){
-
+.nav-inner{
+		display:block;
+	}
+	
 	p{
 		font-size:16px;
 	}
@@ -465,9 +471,30 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
-}
+
 
 @media screen and (max-width: 780px){
+.nav-link:hover{
+	color:wihte;
+	transition: .2s linear;
+}
+
+.nav-link:after{
+	content:"";
+	display:block;
+	width:100%;
+	height:3px;
+	visibility:hidden;
+	background-color:rgb(218, 165, 32);
+	position:absolutee;
+	top:100%;
+	left:0;
+	z-index:1;
+	opacity:0;
+	transition: opacity .1s linear;
+}
+
+
 	.header-inner{
 	align-items:center;
 } 
@@ -475,8 +502,11 @@ h1,h2,h3,h4,h5,h6{
 	.nav{
 		display:none;
 	}
+	
 	#burger{
 		visibility:visible;	
+		position:fixed;
+		right:0;
 	}
 	.stat-num{
 		font-size:60px;
@@ -484,7 +514,7 @@ h1,h2,h3,h4,h5,h6{
 	.intro-title2{
 		font-size:30px;
 		padding:0 10px;
-		margin-top:30px;
+		margin-top:50px;
 	}
 	.intro-title{
 		padding:0 10px;
@@ -493,17 +523,12 @@ h1,h2,h3,h4,h5,h6{
 		margin-right:20px;
 	}
 	
+
 }	
 
 @media screen and (max-width: 650px){
 	.stat-num{
 		font-size:70px;
-	}
-}
-
-@media screen and (max-width: 600px){
-	.stat-num{
-		font-size:60px;
 	}
 	/*главная*/
 	.intro-title2{
@@ -512,6 +537,13 @@ h1,h2,h3,h4,h5,h6{
 	.intro-title{
 			font-size:70px;
 	}
+}
+
+@media screen and (max-width: 600px){
+	.stat-num{
+		font-size:60px;
+	}
+	
 }
 
 
